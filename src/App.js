@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn Docker + React and I was changed!!!
+            Learn Docker + React and I was changed on the feature branch
           </a>
         </header>
       </div>

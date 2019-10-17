@@ -25,7 +25,14 @@
     <title>React App</title>
   </head>
   <body>
-    <script>class InputForm extends React.Component {
+    <script>import React from "react";
+import TextField from "@material-ui/core/TextField";
+import "../../index.css";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { emitChatMessage } from "../../api";
+      
+      class InputForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

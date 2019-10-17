@@ -110,8 +110,6 @@ class App extends Component {
           { this.renderLogin() }
         </div>
       </div>
-
-
 class App extends Component {
   render() {
     return (

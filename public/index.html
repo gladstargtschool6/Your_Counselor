@@ -25,7 +25,63 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>class InputForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "",
+      modalOpen: true
+    };
+
+    this._handleKeyDown = this._handleKeyDown.bind(this);
+  }
+
+  onChange(event, message) {
+    const newMessage = event.target.value;
+    this.setState({ message: newMessage });
+  }
+
+  _handleKeyDown(event) {
+    if (event.key === "Enter") {
+      emitChatMessage({ author: this.props.person, message: this.state.message });
+      this.setState({ message: "" });
+      event.preventDefault();
+    }
+  }
+
+  render() {
+    return (
+      <div className="div_input_form">    
+        <form onSubmit={this.handleSubmit}>
+          <TextField
+            id="outlined-email-input"
+            label="Tekst"
+            type="text"
+            name="text_box"
+            fullWidth
+            placeholder="Skriv inn tekst her..."
+            autoComplete="off"
+            margin="normal"
+            variant="outlined"
+            value={this.state.message}
+            onChange={this.onChange.bind(this)}
+            onKeyDown={this._handleKeyDown}
+          />
+        </form>
+      </div>
+    );
+  }
+}
+
+// Not in use at the moment. Previous usage replaced by websockets. 
+const mapStateToProps = ({todo}) => ({});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({}, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(InputForm);</script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

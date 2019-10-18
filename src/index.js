@@ -8,12 +8,11 @@ import { render } from 'react-dom'
 import firebase from 'firebase'
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAErjh2fdlciBm7UjK1K343W9YrmETuIhY',
-  authDomain: 'spidergram-c7cc8.firebaseapp.com',
-  databaseURL: 'https://spidergram-c7cc8.firebaseio.com',
-  projectId: 'spidergram-c7cc8',
-  storageBucket: 'spidergram-c7cc8.appspot.com',
-  messagingSenderId: '213334105146'
+  apiKey: 'AIzaSyCVgTBrHMK808-huXDbEsx5nDmyPwbxiLI',
+  authDomain: 'www.gladstar.sch.ng',
+  databaseURL: 'https://marine-infinity-244511.firebaseio.com/',
+  projectId: 'marine-infinity-244511',
+  storageBucket: 'marine-infinity-244511.appspot.com',
 })
 
 render(

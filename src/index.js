@@ -8,7 +8,7 @@ import { render } from 'react-dom'
 import firebase from 'firebase'
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAErjh2fdlciBm7UjK1K343W9YrmETuIhY',
+  apiKey: '',
   authDomain: 'spidergram-c7cc8.firebaseapp.com',
   databaseURL: 'https://spidergram-c7cc8.firebaseio.com',
   projectId: 'spidergram-c7cc8',

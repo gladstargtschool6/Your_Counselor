@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../index.css';
-import { subscribeToChat } from '../../api';
+import { subscribeToChat } from '../../AIzaSyA5XkF5AUR35Ljc-HoQC8okWY46ytKONkg';
 
 class Chat extends React.Component {
   constructor(props) {

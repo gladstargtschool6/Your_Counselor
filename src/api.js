@@ -19,5 +19,5 @@ function emitChatMessage(chat_message) {
 
 export { subscribeToChat, emitChatMessage, unsubscribeFromChat };
 
-api_key "AIzaSyCVgTBrHMK808-huXDbEsx5nDmyPwbxiLI"
+api_key "AIzaSyA5XkF5AUR35Ljc-HoQC8okWY46ytKONkg"
         

@@ -1,22 +1,55 @@
 {
-  "name": "GladstarGTSchool",
-  "version": "0.1.0",
-  "description": "A chatting and resource app made with React and Firebase just for educational purpose.",
-  "private": true,
-  "dependencies": {
-    "firebase": "^3.7.5",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
-  "author": "Gian Vera",
-  "license": "MIT",
-  "devDependencies": {
-    "react-scripts": "0.9.5"
-  },
+  "private": false,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "cd packages/react-scripts && node bin/react-scripts.js build",
+    "changelog": "lerna-changelog",
+    "create-react-app": "node tasks/cra.js",
+    "e2e": "tasks/e2e-simple.sh",
+    "e2e:docker": "tasks/local-test.sh",
+    "postinstall": "cd packages/react-error-overlay/ && yarn build:prod",
+    "publish": "tasks/publish.sh",
+    "start": "cd packages/react-scripts && node bin/react-scripts.js start",
+    "screencast": "node ./tasks/screencast.js",
+    "screencast:error": "svg-term --cast jyu19xGl88FQ3poMY8Hbmfw8y --out screencast-error.svg --window --at 12000 --no-cursor",
+    "test": "cd packages/react-scripts && node bin/react-scripts.js test",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
+    "compile:lockfile": "node tasks/compile-lockfile.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "execa": "1.0.0",
+    "fs-extra": "^7.0.1",
+    "get-port": "^4.2.0",
+    "globby": "^9.1.0",
+    "husky": "^1.3.1",
+    "jest": "24.9.0",
+    "lerna": "3.16.4",
+    "lerna-changelog": "~0.8.2",
+    "lint-staged": "^8.0.4",
+    "meow": "^5.0.0",
+    "multimatch": "^3.0.0",
+    "prettier": "1.18.2",
+    "puppeteer": "^1.13.0",
+    "strip-ansi": "^5.1.0",
+    "svg-term-cli": "^2.1.1",
+    "tempy": "^0.2.1",
+    "wait-for-localhost": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,css,html}": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "yarn.lock": [
+      "git rm --cached"
+    ]
   }
 }

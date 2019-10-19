@@ -89,7 +89,21 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(InputForm);</script>
-    <div id="root"></div>
+    <div id="root">/**
+ * Triggered by a change to a Firebase RTDB reference.
+ *
+ * @param {!Object} event Event payload.
+ * @param {!Object} context Metadata for the event.
+ */
+exports.helloRTDB = (event, context) => {
+  const resource = context.resource;
+  // log out the resource string that triggered the function
+  console.log('Function triggered by change to: ' +  resource);
+  // now log the full event object
+  console.log(JSON.stringify(event));
+};
+
+</div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

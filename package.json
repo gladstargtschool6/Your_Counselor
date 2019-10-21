@@ -120,10 +120,4 @@
     "version-check": "node ./scripts/tasks/version-check.js"
   }
 }
-{
-  "name": "my-package",
-  "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest"
-  }
-}
+

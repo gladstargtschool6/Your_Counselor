@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import logo from './ggts1.jpg';
 import './App.css';
 import firebase from 'firebase'
-
 import FileUpload from './FileUpload'
-import chat from './index_chat'
+import chat from './chat'
 import api from './api'
 import './App.css'
 

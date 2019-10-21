@@ -122,11 +122,11 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://www.gladstar.sch.ng"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn Docker + React and I was changed on the feature branch
+            Gladstar Gifted and Talented School
           </a>
         </header>
       </div>

@@ -5,6 +5,7 @@ import firebase from 'firebase'
 
 import FileUpload from './FileUpload'
 import chat from './index_chat'
+import api from './api'
 import './App.css'
 
 class App extends Component {

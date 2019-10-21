@@ -1,0 +1,7 @@
+{
+  "name": "com.gladstar.gladstargtschool",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
+}

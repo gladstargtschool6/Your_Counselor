@@ -7,15 +7,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import firebase from 'firebase'
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyCVgTBrHMK808-huXDbEsx5nDmyPwbxiLI',
-  authDomain: 'www.gladstar.sch.ng',
-  databaseURL: 'https://marine-infinity-244511.firebaseio.com/',
-  projectId: 'marine-infinity-244511',
-  storageBucket: 'marine-infinity-244511.appspot.com',
-})
-
-
 'use strict';
 
 // [START functions_http_content]

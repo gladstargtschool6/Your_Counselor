@@ -1,4 +1,21 @@
 {
+  "name": "Your_Counselor",
+  "version": "1.0.0",
+  "description": "Original version of this document copied from [yarnpkg](https://yarnpkg.com/lang/en/docs/package-json/).",
+  "main": "index.js",
+  "scripts": {
+    "toc": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gladstargtschool6/Your_Counselor.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gladstargtschool6/Your_Counselor/issues"
+  },
+  "homepage": "",
   "private": true,
   "workspaces": [
     "packages/*"
